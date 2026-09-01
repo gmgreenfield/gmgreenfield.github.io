@@ -1,0 +1,10 @@
+source "https://rubygems.org"
+
+gem "base64"
+gem "csv"
+gem "webrick"
+gem "jekyll", "~> 4.3.3"
+gem "jekyll-whiteglass"
+gem "jekyll-archives"
+gem "jekyll-paginate"
+gem "jekyll-sitemap"
