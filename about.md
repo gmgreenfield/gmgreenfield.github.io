@@ -9,3 +9,6 @@ I’m Graham Greenfield, and this site is a place for software development notes
 My main interests are in systems programming, cryptography, and LLMs (and their tuning).
 
 You won't find me active on social media, as my online exposure is kept minimal these days. With a little digging you should be able to figure out my email address; I'm not listing it here for obvious reasons.
+
+### Elsewhere
+- [GPG ed25519 DAFA59F8709EF881](https://github.com/gmgreenfield.gpg){:target="_blank"}
