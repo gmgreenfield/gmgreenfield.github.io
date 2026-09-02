@@ -1,2 +1,2 @@
-# gmgreenfield.github.io
-Blog and software dev projects.
+# [https://grahamg.dev](https://grahamg.dev)
+Blog and software development projects; I'll occasionally write about current events.
