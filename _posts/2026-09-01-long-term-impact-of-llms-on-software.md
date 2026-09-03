@@ -13,7 +13,9 @@ The study of software engineering as a discipline will largely be centered on th
 
 For a majority of my career I've been involved working on CRUD apps and that's where a chunk of my expertise lies, I've made peace with that. After seeing where things are headed for my category of software developer and seeing it continually progress year after year, I've pivoted more into a systems programming track. I'm focusing on C, Go, Rust and Clojure. Now, LLMs can write C just fine as there's a wide selection of source material over many years that's repetitive, but it's more of a lynchpin into BSD and gnu/Linux ecosystem knowledge. Go, Rust and especially Clojure aren't as productive as Python or Javascript for even frontier LLMs.
 
-Why? I could spend hours writing individual examples but I'm going to two glaring cases: 1) Lack of training data and 2)The semantics of the Clojure language.
+Why? I could spend hours writing individual examples but I'm going to look two glaring cases.
+1. Lack of training data with Rust and Go.
+2. The semantics of Clojure and the other lisps.
 
 For Go, correctness depends more on knowing language specific conventions. A model can product perfectly valid Go that is poorly written with bad error handling patterns and unnecessary abstractions. Not to mention misuse of interfaces, poor concurrency structure or failure or use the standard library idiomatically. Also, nowhere near the amount of training data that Python has: The Go team's 2025 developer survey found that most Go developers were using AI development tools, but satisfaction was only middling, with quality concerns specifically called out. Developers also reported wanting help with best practices and making effective use of the standard library. 
 
