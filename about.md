@@ -17,6 +17,7 @@ I'm not trying to make myself out as a saint, but I know enough to see where thi
 I’m not currently looking for a new job. I’m happy doing more systems-oriented development these days, and I’m enjoying where that’s taking me. The way I see it, there's value staying somewhere long enough to witness the progression of your decisions play out so that you must confront them. Jumping out of a position to a new one too early often means starting over in the same pattern: a new codebase, organization, picking up someone elses problems. Instead coming to terms with decisions you made four years is going to add more depth to skillset. In other words, five first years doesn't match five contigeous years.
 
 ## Blogs I Read
+- [D. J. Bernstein](https://blog.cr.yp.to/){:target="_blank"}
 - [Bruce C. Miller](https://macroexpand.com/~bm3719){:target="_blank"}
 - [Tristan Hume](https://thume.ca/){:target="_blank"}
 - [Jeffrey Paul](https://sneak.berlin/){:target="_blank"}
