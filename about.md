@@ -27,6 +27,7 @@ These are some blogs that I've found *interesting*. This doesn't mean I'm *endor
 - [Joseph Jordan — Littoria](https://littoria.substack.com/){:target="_blank"}
 - [Nick Land (Archived)](https://oldnicksite.wordpress.com/){:target="_blank"}
 - [Bruce C. Miller](https://macroexpand.com/~bm3719){:target="_blank"}
+- [Bruce Schneier](https://www.schneier.com/){:target="_blank"}
 - [Jamie Zawinski](https://www.jwz.org/blog/){:target="_blank"}
  
 ## Public Keys
