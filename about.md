@@ -26,4 +26,4 @@ I’m not currently looking for a new job. I’m happy doing more systems-orient
  
 ## Public Keys
 - [GPG ed25519 DAFA59F8709EF881](https://github.com/gmgreenfield.gpg){:target="_blank"}
-- [Public SSH Keys](https://github.com/gmgreenfield.keys){:target="_blank"}
+- [SSH Keys](https://github.com/gmgreenfield.keys){:target="_blank"}
