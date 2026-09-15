@@ -19,6 +19,7 @@ I’m not currently looking for a new job. I’m happy doing more systems-orient
 ## Blogs I Read
 - [D. J. Bernstein](https://blog.cr.yp.to/){:target="_blank"}
 - [Bruce C. Miller](https://macroexpand.com/~bm3719){:target="_blank"}
+- [Jamie Zawinski](https://www.jwz.org/blog/){:target="_blank"}
 - [Tristan Hume](https://thume.ca/){:target="_blank"}
 - [Jeffrey Paul](https://sneak.berlin/){:target="_blank"}
 - [RachelByTheBay](https://rachelbythebay.com/){:target="_blank"}
