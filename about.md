@@ -18,6 +18,7 @@ I’m not currently looking for a new job. I’m happy doing more systems-orient
 
 ## Blogs I Read
 These are some blogs that I've found *interesting*. This doesn't mean I'm *endorsing* them.
+
 "Blogs" here is interpreted broadly, but not broadly enough to cover individual postings. Readers familiar with Twitter can think of this as a "following" list rather than a "retweets" list. It has become clear to me that publicly maintaining this sort of information is useful for [decentralization](https://ar.al/2020/08/07/what-is-the-small-web/){:target="_blank"}. ([More on that topic.](https://blog.clew.se/posts/secret-web/){:target="_blank"})
 - [Scott Aaronson](https://scottaaronson.blog/){:target="_blank"}
 - [D. J. Bernstein](https://blog.cr.yp.to/){:target="_blank"}
