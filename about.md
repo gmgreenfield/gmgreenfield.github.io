@@ -31,6 +31,7 @@ I’m not currently looking for a new job. I’m happy doing more systems-orient
 [tig](https://jonas.github.io/tig/){:target="_blank"},
 [vaultwarden](https://github.com/dani-garcia/vaultwarden){:target="_blank"},
 [wireguard](https://www.wireguard.com/){:target="_blank"},
+[zerotier](https://www.zerotier.com/){:target="_blank"},
 [zsh](https://www.zsh.org/){:target="_blank"}
 
 
