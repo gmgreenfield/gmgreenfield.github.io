@@ -14,6 +14,7 @@ I’m not currently looking for a new job. I’m happy doing more systems-orient
 
 ## Some Programs I Use
 [alpine](https://wiki.archlinux.org/title/Alpine){:target="_blank"},
+[darcs](https://darcs.net/){:target="_blank"},
 [dwm](https://dwm.suckless.org/){:target="_blank"},
 [feh](https://feh.finalrewind.org/){:target="_blank"},
 [firefox](https://www.mozilla.org/firefox/new/){:target="_blank"},
