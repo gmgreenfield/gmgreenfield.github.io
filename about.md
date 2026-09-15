@@ -17,14 +17,14 @@ I'm not trying to make myself out as a saint, but I know enough to see where thi
 I’m not currently looking for a new job. I’m happy doing more systems-oriented development these days, and I’m enjoying where that’s taking me. The way I see it, there's value staying somewhere long enough to witness the progression of your decisions play out so that you must confront them. Jumping out of a position to a new one too early often means starting over in the same pattern: a new codebase, organization, picking up someone elses problems. Instead coming to terms with decisions you made four years is going to add more depth to skillset. In other words, five first years doesn't match five contigeous years.
 
 ## Blogs I Read
+These are some blogs that I've found *interesting*. This doesn't mean I'm *endorsing* them. 
+- [Scott Aaronson](https://scottaaronson.blog/){:target="_blank"}
 - [D. J. Bernstein](https://blog.cr.yp.to/){:target="_blank"}
+- [Bram Cohen](https://bramcohen.com/){:target="_blank"}
+- [Joseph Jordan — Littoria](https://littoria.substack.com/){:target="_blank"}
+- [Nick Land (Archived)](https://oldnicksite.wordpress.com/){:target="_blank"}
 - [Bruce C. Miller](https://macroexpand.com/~bm3719){:target="_blank"}
 - [Jamie Zawinski](https://www.jwz.org/blog/){:target="_blank"}
-- [Tristan Hume](https://thume.ca/){:target="_blank"}
-- [Jeffrey Paul](https://sneak.berlin/){:target="_blank"}
-- [RachelByTheBay](https://rachelbythebay.com/){:target="_blank"}
-- [Ben Kuhn](https://www.benkuhn.net/){:target="_blank"}
-- [David R. MacIver](https://drmaciver.com/){:target="_blank"}
  
 ## Public Keys
 - [GPG ed25519 DAFA59F8709EF881](https://github.com/gmgreenfield.gpg){:target="_blank"}
