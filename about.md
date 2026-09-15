@@ -17,10 +17,12 @@ I'm not trying to make myself out as a saint, but I know enough to see where thi
 I’m not currently looking for a new job. I’m happy doing more systems-oriented development these days, and I’m enjoying where that’s taking me. The way I see it, there's value staying somewhere long enough to witness the progression of your decisions play out so that you must confront them. Jumping out of a position to a new one too early often means starting over in the same pattern: a new codebase, organization, picking up someone elses problems. Instead coming to terms with decisions you made four years is going to add more depth to skillset. In other words, five first years doesn't match five contigeous years.
 
 ## Blogs I Read
-These are some blogs that I've found *interesting*. This doesn't mean I'm *endorsing* them. 
+These are some blogs that I've found *interesting*. This doesn't mean I'm *endorsing* them.
+"Blogs" here is interpreted broadly, but not broadly enough to cover individual postings. Readers familiar with Twitter can think of this as a "following" list rather than a "retweets" list. It has become clear to me that publicly maintaining this sort of information is useful for [decentralization](https://ar.al/2020/08/07/what-is-the-small-web/){:target="_blank"}. ([More on that topic.](https://blog.clew.se/posts/secret-web/){:target="_blank"})
 - [Scott Aaronson](https://scottaaronson.blog/){:target="_blank"}
 - [D. J. Bernstein](https://blog.cr.yp.to/){:target="_blank"}
 - [Bram Cohen](https://bramcohen.com/){:target="_blank"}
+- [Greg Egan](https://www.gregegan.net/){:target="_blank"}
 - [Joseph Jordan — Littoria](https://littoria.substack.com/){:target="_blank"}
 - [Nick Land (Archived)](https://oldnicksite.wordpress.com/){:target="_blank"}
 - [Bruce C. Miller](https://macroexpand.com/~bm3719){:target="_blank"}
