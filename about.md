@@ -24,6 +24,7 @@ I’m not currently looking for a new job. I’m happy doing more systems-orient
 [screen](https://www.gnu.org/software/screen){:target="_blank"},
 [st](https://st.suckless.org/){:target="_blank"},
 [surf](https://surf.suckless.org/){:target="_blank"},
+[sequoia-pgp](https://sequoia-pgp.org/){:target="_blank"},
 [text area cache](https://github.com/wildskyf/TextareaCache){:target="_blank"},
 [textmate](https://macromates.com/){:target="_blank"},
 [tig](https://jonas.github.io/tig/){:target="_blank"},
