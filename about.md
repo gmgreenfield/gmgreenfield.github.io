@@ -28,4 +28,4 @@ These are some blogs that I've found *interesting*. This doesn't mean I'm *endor
  
 ## Public Keys
 - [GPG ed25519 DAFA59F8709EF881](https://github.com/gmgreenfield.gpg){:target="_blank"}
-- [SSH Keys](https://github.com/gmgreenfield.keys){:target="_blank"}
+- [SSH](https://github.com/gmgreenfield.keys){:target="_blank"}
