@@ -14,7 +14,8 @@ If an LLM helped a programmer write something, hey no problem. But when the pers
 
 I'm not trying to make myself out as a saint, but I know enough to see where this is heading. It's why tools like Claude or Codex that can take a request, write the files, and immediately give you a working solution raise an eyebrow. There’s something concerning about that tight loop: ask for something, watch it get built, and see it work. There’s a risk that if a person starts optimizing for that feeling rather than for the process of actually figuring things out themselves (taking your hits up front), It's going to lead to skill atrophy. Many people have written about how they've observed this in their daily work on news.ycombinator.com.
 
-I’m not currently looking for a new job. I’m happy doing more systems-oriented development these days, and I’m enjoying where that’s taking me. The way I see it, there's value staying somewhere long enough to witness the progression of your decisions play out so that you must confront them. Jumping out of a position to a new one too early often means starting over in the same pattern: a new codebase, organization, picking up someone elses problems. Instead coming to terms with decisions you made four years is going to add more depth to skillset. In other words, five first years doesn't match five contigeous years.
+I’m not currently looking for a new job. I’m happy doing more systems-oriented development these days, and I’m enjoying where that’s taking me.
+
 
 ## Blogs I Read
 These are some blogs that I've found *interesting*. This doesn't mean I'm *endorsing* them.
