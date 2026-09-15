@@ -10,10 +10,6 @@ My main interests these days are systems programming, BSD and GNU/Linux, cryptog
 
 I’m also interested in how LLMs fit into the software development process. I mean they can be genuinely useful tools: an interactive meta documentation browser, a way to explore an idea, a means of thinking through a design, or potentially another way to see a problem. However, I want to make a distinction between using a tool to help you think and using it instead of thinking.
 
-If an LLM helped a programmer write something, hey no problem. But when the person responsible for the code can't easily explain what it does, why it’s there, or why it's written that way there's obviously a major problem. Today especially, it's a balancing act using these tools to become better at understanding and building software, rather than using it as a autopilot for the lazy. I mean you have to know how to land the plane manually before leaning on the automated process. For me it means, taking your hits up front rather than pawning them off into technical debt of the future.
-
-I'm not trying to make myself out as a saint, but I know enough to see where this is heading. It's why tools like Claude or Codex that can take a request, write the files, and immediately give you a working solution raise an eyebrow. There’s something concerning about that tight loop: ask for something, watch it get built, and see it work. There’s a risk that if a person starts optimizing for that feeling rather than for the process of actually figuring things out themselves (taking your hits up front), It's going to lead to skill atrophy. Many people have written about how they've observed this in their daily work on news.ycombinator.com.
-
 I’m not currently looking for a new job. I’m happy doing more systems-oriented development these days, and I’m enjoying where that’s taking me.
 
 
