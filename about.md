@@ -12,6 +12,25 @@ I’m also interested in how LLMs fit into the software development process. I m
 
 I’m not currently looking for a new job. I’m happy doing more systems-oriented development these days, and I’m enjoying where that’s taking me.
 
+## Some Programs I Use
+[alpine](https://wiki.archlinux.org/title/Alpine){:target="_blank"},
+[dwm](https://dwm.suckless.org/){:target="_blank"},
+[feh](https://feh.finalrewind.org/){:target="_blank"},
+[firefox](https://www.mozilla.org/firefox/new/){:target="_blank"},
+[gg-edit](https://github.com/gmgreenfield/gg-edit){:target="_blank"},
+[git](https://git-scm.com/){:target="_blank"},
+[neovim](https://neovim.io/){:target="_blank"},
+[onetab](https://www.one-tab.com/){:target="_blank"},
+[screen](https://www.gnu.org/software/screen){:target="_blank"},
+[st](https://st.suckless.org/){:target="_blank"},
+[surf](https://surf.suckless.org/){:target="_blank"},
+[text area cache](https://github.com/wildskyf/TextareaCache){:target="_blank"},
+[textmate](https://macromates.com/){:target="_blank"},
+[tig](https://jonas.github.io/tig/){:target="_blank"},
+[vaultwarden](https://github.com/dani-garcia/vaultwarden){:target="_blank"},
+[wireguard](https://www.wireguard.com/){:target="_blank"},
+[zsh](https://www.zsh.org/){:target="_blank"}
+
 
 ## Blogs I Read
 These are some blogs that I've found *interesting*. This doesn't mean I'm *endorsing* them.
