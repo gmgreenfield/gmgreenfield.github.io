@@ -35,5 +35,3 @@ To be highly sought after, today's programmer should be able to produce somethin
 
 If you can stay reasonably disciplined and even just use LLMs as sort of a high-level meta documentation tool, while all the actual code comes from your thought process, you'll be several miles ahead of those that took the easy path forward with the popular LLM harness trends.
 END OF LINE
-
-Thanks for listening to my ramble. I'll see you on the other end of this thing when the sensationalism dies out most managers (hopefully) come to their senses to see what has to be reconciled.
