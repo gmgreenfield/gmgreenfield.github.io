@@ -34,4 +34,5 @@ Being able to sit down in front of a minimal text editor and write out a valid p
 To be highly sought after, today's programmer should be able to produce something meaningful in the same way that a programmer working in the '80s or '90s would. In that time, it was taught and encouraged for developers to internally picture and map out program design in their head and only then sketch it out more concretely on paper. Computing time was ought-after, a resource that people competed for. It becomes evident that when a person works without many limitations, compared to someone with a numerous hard constraints the requirement of creating a system in a tightly bounded space is always expressing more creativity satisfy a set of requirements. But why then can't managers make the second order rationalization to where this is taking us? 
 
 If you can stay reasonably disciplined and even just use LLMs as sort of a high-level meta documentation tool, while all the actual code comes from your thought process, you'll be several miles ahead of those that took the easy path forward with the popular LLM harness trends.
+
 END OF LINE
