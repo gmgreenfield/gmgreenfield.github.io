@@ -2,9 +2,9 @@ title: Graham Greenfield
 author: Graham Greenfield
 email: grahamg@gmail.com
 description: >-
-  A software development blog and notes on technology.
+  A peronal blog about software development, technology, misc. notes and occasionally some outside topics.
 baseurl: ""
-url: "https://gmgreenfield.github.io"
+url: "https://grahamg.xyz"
 lang: en-US
 
 theme: jekyll-whiteglass
