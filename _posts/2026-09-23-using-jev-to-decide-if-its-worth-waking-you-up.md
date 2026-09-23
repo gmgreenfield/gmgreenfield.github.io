@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using Jev to Decide If a Problem Is Worth Waking You Up"
-description: "An small introduction to Jev"
+description: "A short introduction to Jev, enough to know what it does at the surface."
 date: 2026-09-23 08:00:00 +0000
 categories: [general]
 tags: [ai, programming]
@@ -42,5 +42,7 @@ else:
 ```
 
 Your code still controls the response. I’d test its judgments against actual incidents before letting it affect paging. The threshold here is illustrative; a reported probability isn’t proof.
+
+As I continue to read about this project, I'll look into adding additional content here.
 
 END OF LINE
