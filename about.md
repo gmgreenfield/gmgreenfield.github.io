@@ -44,13 +44,13 @@ These are some blogs that I've found *interesting*. This doesn't mean I'm *endor
 - [Bram Cohen](https://bramcohen.com/){:target="_blank"}
 - [Greg Egan](https://www.gregegan.net/){:target="_blank"}
 - [George Hotz](https://geohot.github.io/blog/){:target="_blank"}
-- [Joseph Jordan — Littoria](https://littoria.substack.com/){:target="_blank"}
-- [Nick Land (Archived)](https://oldnicksite.wordpress.com/){:target="_blank"}
+- [Joseph Jordan](https://littoria.substack.com/){:target="_blank"}
 - [Devine Lu Linvega](https://wiki.xxiivv.com/site/blog.html){:target="_blank"}
 - [Bruce C. Miller](https://macroexpand.com/~bm3719){:target="_blank"}
 - [Paged Out!](https://pagedout.institute/){:target="_blank"}
 - [PoC\|\|GTFO](https://www.alchemistowl.org/pocorgtfo/){:target="_blank"}
 - [Bruce Schneier](https://www.schneier.com/){:target="_blank"}
+- [Chris Siebenmann](https://utcc.utoronto.ca/~cks/space/blog/){:target="_blank"}
 - [tmp.0ut](https://tmpout.sh/){:target="_blank"}
 - [Jamie Zawinski](https://www.jwz.org/blog/){:target="_blank"}
 
