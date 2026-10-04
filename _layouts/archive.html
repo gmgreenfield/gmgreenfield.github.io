@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<h1 class="chapter-title">{{ page.title | escape }}</h1>
+{{ content }}
+{% assign years = site.posts | group_by_exp: 'post', "post.date | date: '%Y'" %}
+{% for year in years %}
+  <section aria-labelledby="year-{{ year.name }}">
+    <h2 id="year-{{ year.name }}">{{ year.name }}</h2>
+    {% include archive_list.html posts=year.items %}
+  </section>
+{% endfor %}

@@ -79,11 +79,6 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    jekyll-whiteglass (1.11.7)
-      jekyll (>= 3.3)
-      jekyll-archives (~> 2.1)
-      jekyll-paginate (~> 1.1)
-      jekyll-sitemap (~> 1.0)
     kramdown (2.5.2)
       rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
@@ -169,7 +164,6 @@ DEPENDENCIES
   jekyll-archives
   jekyll-paginate
   jekyll-sitemap
-  jekyll-whiteglass
   webrick
 
 BUNDLED WITH

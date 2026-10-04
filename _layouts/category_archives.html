@@ -1,0 +1,6 @@
+---
+layout: default
+---
+<h1 class="chapter-title">{{ page.type | capitalize }}: {{ page.title | escape }}</h1>
+{% include archive_list.html posts=page.posts %}
+<p><a href="{{ '/archives/' | relative_url }}">All archives &raquo;</a></p>

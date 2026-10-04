@@ -1,0 +1,200 @@
+/* Jekyll adaptation of The Proportional Web by Oskar Wickström.
+ * Upstream MIT license: proportional/LICENSE.txt.
+ * Keep the original typesetting and page geometry; adapt only blog elements.
+ */
+@import url("fonts/fonts.css");
+@import url("proportional/index.css");
+
+/* Preserve the reference's 66ch text measure and 1.2rem baseline. */
+body { min-width: 0; }
+main { margin-top: 0; }
+a { text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+.site-header .site-title {
+  font-family: "Alegreya SC", serif;
+  font-variant: all-small-caps;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: calc(2 * var(--line-height));
+  margin: 0;
+  padding: var(--line-height) 0 0;
+  border: 0;
+  text-align: left;
+  text-indent: 0;
+}
+.site-title a, .chapter-title a, .contents-list a {
+  text-decoration: none;
+}
+.site-title a:hover, .chapter-title a:hover, .contents-list a:hover {
+  text-decoration: underline;
+}
+.site-header .subtitle {
+  line-height: 1.5rem;
+  margin: var(--line-height) 0;
+  text-wrap: pretty;
+  hyphens: none;
+}
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.5ch;
+  margin-top: var(--line-height);
+}
+.site-nav a { margin: 0; }
+.site-nav [aria-current="page"] { text-decoration: none; }
+.chapter-title, body h1.chapter-title {
+  font-family: "Alegreya SC", serif;
+  font-variant: titling-caps;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 1.5rem;
+  margin: calc(var(--line-height) * 2) 0 var(--line-height);
+  padding: var(--line-height) 0 calc(var(--line-height) - var(--border-thickness));
+  border-bottom: var(--border-thickness) solid var(--text-color);
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+  scroll-margin-top: var(--line-height);
+}
+.contents-list { list-style: none; }
+.contents-list li::before, .archive-list li::before { content: none; }
+.contents-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 1ch;
+  padding: 0.15rem 0;
+}
+.contents-list a > * { margin: 0; }
+.contents-number {
+  flex: 0 0 1.5ch;
+  font-size: 0.875rem;
+  font-variant-numeric: lining-nums;
+}
+.post-meta, .post-tags {
+  font-size: 0.875rem;
+  text-align: left;
+  text-indent: 0;
+}
+.post-meta { margin: 0 0 var(--line-height); }
+.post-preview { margin-top: calc(var(--line-height) * 2); }
+.prose { margin-top: 0; }
+.prose > :first-child { margin-top: 0; }
+.prose p {
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphenate-limit-chars: 6 3 3;
+}
+.prose h2, .prose h3, .prose h4 { line-height: 1.5rem; }
+.prose ul, .prose ol { padding-left: 3ch; }
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.prose li::before { content: none; }
+.prose li::marker { font-variant-numeric: lining-nums; }
+.prose li > p { text-align: left; }
+.prose li > p:first-child { margin-top: 0; }
+.prose li > ul, .prose li > ol { margin: 0; }
+.prose a, .post-navigation a { overflow-wrap: anywhere; }
+.prose img { height: auto; }
+.prose blockquote { margin-inline: 3ch; }
+.prose aside {
+  position: static;
+  width: auto;
+  margin: var(--line-height) 3ch;
+  text-align: left;
+}
+.prose aside::before { display: inline-block; }
+.prose pre {
+  padding: var(--line-height) 0;
+  border-block: 1px solid #aaa;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
+  tab-size: 4;
+  font-variant-numeric: lining-nums;
+}
+.prose pre code { font-size: 0.875rem; }
+.prose .highlight { margin: 0; }
+.highlight .c, .highlight .c1, .highlight .cm { color: #555; font-style: italic; }
+.highlight .k, .highlight .kn, .highlight .kd, .highlight .ow { font-weight: bold; }
+.prose table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  margin-top: var(--line-height);
+}
+.read-more { font-style: italic; text-align: left; }
+.archive-list li {
+  display: grid;
+  grid-template-columns: 7ch minmax(0, 1fr);
+  gap: 1ch;
+  margin-top: calc(var(--line-height) / 2);
+}
+.archive-list li > * { margin: 0; }
+.archive-list time { font-size: 0.875rem; }
+.post-navigation, .pagination {
+  display: flex;
+  justify-content: space-between;
+  gap: 3ch;
+  margin-top: calc(var(--line-height) * 2);
+}
+.post-navigation > *, .pagination > * { margin: 0; flex: 1; }
+.post-navigation a { text-decoration: none; }
+.post-navigation a:hover { text-decoration: underline; }
+.nav-label {
+  display: block;
+  font-family: "Alegreya SC", serif;
+  font-variant: all-small-caps;
+  letter-spacing: 0.075em;
+}
+.site-footer {
+  margin-top: calc(var(--line-height) * 3);
+  padding-bottom: calc(var(--line-height) * 2);
+  font-size: 0.875rem;
+}
+.site-footer p { text-align: center; text-indent: 0; }
+.site-footer .theme-credit { margin-top: 0; }
+.support-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: calc(var(--line-height) * 2) 0 var(--line-height);
+}
+.support-links a { margin: 0; }
+.support-links img { width: auto; max-width: 100%; height: 44px; filter: grayscale(1); }
+.visually-hidden, .skip-link:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.skip-link:focus {
+  position: absolute;
+  top: 0.5rem;
+  left: var(--horizontal-margin);
+  background: var(--background-color);
+  z-index: 1;
+}
+@media screen and (max-width: 480px) {
+  .site-header { margin: calc(var(--line-height) * 2) 0; }
+  .site-header .site-title { font-size: 2rem; line-height: 1.2; }
+  .post-navigation { flex-direction: column; gap: var(--line-height); }
+}
+@media print {
+  .site-nav, .support-links, .post-navigation, .pagination, .skip-link { display: none; }
+  body { max-width: 72ch; margin: auto; overflow: visible; }
+  .site-header { margin: 0 0 calc(var(--line-height) * 2); }
+  h1, h2, h3 { break-after: avoid; }
+  .prose img { break-before: auto; }
+  .prose pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+}

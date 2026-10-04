@@ -1,0 +1,45 @@
+/* Alegreya, Alegreya SC, and Courier Prime are licensed under the SIL OFL.
+ * See the accompanying *-OFL.txt files. All fonts are served locally.
+ */
+@font-face {
+  font-family: "Alegreya";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("alegreya-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alegreya";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("alegreya-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alegreya";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("alegreya-italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alegreya SC";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("alegreya-sc-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alegreya SC";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("alegreya-sc-medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Courier Prime";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("courier-prime-regular.ttf") format("truetype");
+}

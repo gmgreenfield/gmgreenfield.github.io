@@ -2,12 +2,12 @@ title: Graham Greenfield
 author: Graham Greenfield
 email: grahamg@gmail.com
 description: >-
-  A peronal blog about software development, technology, misc. notes and occasionally some outside topics.
+  A personal blog about software development, technology, misc. notes and occasionally some outside topics.
 baseurl: ""
 url: "https://grahamg.xyz"
 lang: en-US
 
-theme: jekyll-whiteglass
+# The Proportional Web-inspired theme lives in _layouts, _includes, and assets.
 plugins:
   - jekyll-archives
   - jekyll-paginate
@@ -27,6 +27,7 @@ jekyll-archives:
     tag: /tags/:name/
 
 exclude:
+  - README.md
   - Gemfile
   - Gemfile.lock
   - vendor/
