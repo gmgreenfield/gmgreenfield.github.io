@@ -12,7 +12,7 @@ I’m also interested in how LLMs fit into the software development process. I m
 
 I’m not currently looking for a new job. I’m happy doing more systems-oriented development these days, and I’m enjoying where that’s taking me.
 
-## Some Programs & Browser Plugins That I Use
+## Some Programs and Browser Extensions I Use
 
 [alpine](https://wiki.archlinux.org/title/Alpine){:target="_blank"},
 [git](https://git-scm.com/){:target="_blank"},
