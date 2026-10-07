@@ -41,6 +41,7 @@ These are some blogs that I've found *interesting*. This doesn't mean I'm *endor
 "Blogs" here is interpreted broadly, but not broadly enough to cover individual postings. Readers familiar with Twitter can think of this as a "following" list rather than a "retweets" list. It has become clear to me that publicly maintaining this sort of information is useful for [decentralization](https://ar.al/2020/08/07/what-is-the-small-web/){:target="_blank"}. ([More on that topic.](https://blog.clew.se/posts/secret-web/){:target="_blank"})
 
 - [Scott Aaronson](https://scottaaronson.blog/){:target="_blank"}
+- [Vincent Bernat](https://vincent.bernat.ch/en){:target="_blank"}
 - [D. J. Bernstein](https://blog.cr.yp.to/){:target="_blank"}
 - [Bram Cohen](https://bramcohen.com/){:target="_blank"}
 - [Drew DeVault](https://drewdevault.com/){:target="_blank"}
@@ -55,6 +56,7 @@ These are some blogs that I've found *interesting*. This doesn't mean I'm *endor
 - [Bruce Schneier](https://www.schneier.com/){:target="_blank"}
 - [Chris Siebenmann](https://utcc.utoronto.ca/~cks/space/blog/){:target="_blank"}
 - [tmp.0ut](https://tmpout.sh/){:target="_blank"}
+- [Christopher Wellons](https://nullprogram.com/index/){:target="_blank"}
 - [Jamie Zawinski](https://www.jwz.org/blog/){:target="_blank"}
 
 ## Public Keys
