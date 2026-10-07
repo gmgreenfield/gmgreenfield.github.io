@@ -50,6 +50,7 @@ These are some blogs that I've found *interesting*. This doesn't mean I'm *endor
 - [Devine Lu Linvega](https://wiki.xxiivv.com/site/blog.html){:target="_blank"}
 - [Bruce C. Miller](https://macroexpand.com/~bm3719){:target="_blank"}
 - [Paged Out!](https://pagedout.institute/){:target="_blank"}
+- [Uros Popovic](https://popovicu.com/){:target="_blank"}
 - [Bruce Schneier](https://www.schneier.com/){:target="_blank"}
 - [Chris Siebenmann](https://utcc.utoronto.ca/~cks/space/blog/){:target="_blank"}
 - [tmp.0ut](https://tmpout.sh/){:target="_blank"}
