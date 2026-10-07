@@ -5,6 +5,7 @@
   {% assign description = page.description | default: site.description | strip_html | normalize_whitespace %}
   <title>{{ document_title | strip | escape }}</title>
   <meta name="description" content="{{ description | escape }}">
+  {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
   <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
   <meta property="og:title" content="{{ document_title | strip | escape }}">
   <meta property="og:description" content="{{ description | escape }}">

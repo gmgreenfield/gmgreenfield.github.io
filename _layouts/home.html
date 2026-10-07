@@ -1,22 +1,18 @@
 ---
 layout: default
 ---
-{% assign posts = paginator.posts | default: site.posts %}
-<nav class="contents" aria-labelledby="contents-title">
-  <h2 id="contents-title" class="chapter-title">Contents{% if paginator.page > 1 %} · Page {{ paginator.page }}{% endif %}</h2>
-  <ol class="contents-list">
+<p class="subtitle">{{site.description | escape}}</p>
+{% assign posts = paginator.posts | default: site.posts | sort: 'date' | reverse %}
+<nav class="post-index" aria-labelledby="post-index-title">
+  <h2 id="post-index-title" class="chapter-title">{{ site.title | escape }}{% if paginator.page > 1 %} · Page {{ paginator.page }}{% endif %}</h2>
+  <ul class="post-list">
     {% for post in posts %}
-      <li><a href="#{{ post.slug }}"><span class="contents-number">{{ forloop.index }}</span><span>{{ post.title | escape }}</span></a></li>
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>
+        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      </li>
     {% endfor %}
-  </ol>
+  </ul>
 </nav>
 {{ content }}
-{% for post in posts %}
-  <article class="post-preview" aria-labelledby="{{ post.slug }}">
-    <h2 class="chapter-title" id="{{ post.slug }}"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-    <p class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time></p>
-    <div class="prose">{{ post.excerpt }}</div>
-    <p class="read-more"><a href="{{ post.url | relative_url }}">Continue reading <span aria-hidden="true">&raquo;</span><span class="visually-hidden"> {{ post.title | escape }}</span></a></p>
-  </article>
-{% endfor %}
 {% include pagination.html %}

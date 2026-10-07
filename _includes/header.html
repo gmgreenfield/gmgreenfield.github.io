@@ -1,10 +1,9 @@
 <header class="site-header">
   {% if page.layout == 'home' %}
-    <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title | escape }}</a></h1>
+    <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.author | escape }}</a></h1>
   {% else %}
-    <p class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title | escape }}</a></p>
+    <p class="site-title"><a href="{{ '/' | relative_url }}">{{ site.author | escape }}</a></p>
   {% endif %}
-  <p class="subtitle">{{ site.description | escape }}</p>
   <nav class="site-nav" aria-label="Main navigation">
     <a href="{{ '/' | relative_url }}"{% if page.layout == 'home' %} aria-current="page"{% endif %}>Home</a>
     {% for item in site.data.navigation.main %}

@@ -1,0 +1,16 @@
+---
+layout: page
+title: "Tags"
+permalink: /tags/
+---
+{% assign sorted_tags = site.tags | sort %}
+{% if sorted_tags.size > 0 %}
+<ul>
+  {% for tag in sorted_tags %}
+    {% assign tag_slug = tag[0] | slugify %}
+    <li><a href="{{ '/tags/' | append: tag_slug | append: '/' | relative_url }}">{{ tag[0] | escape }}</a> ({{ tag[1].size }} {% if tag[1].size == 1 %}post{% else %}posts{% endif %})</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No tags yet.</p>
+{% endif %}
