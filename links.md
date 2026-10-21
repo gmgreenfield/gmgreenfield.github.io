@@ -26,12 +26,6 @@ permalink: /links/
 [zsh](https://www.zsh.org/){:target="_blank"}
 
 
-## Find me online
-- Github: [github.com/gmgreenfield](https://github.com/gmgreenfield){:target="_blank"}
-- Sourcehut: [sr.ht/~gmgreenfield](https://sr.ht/~gmgreenfield){:target="_blank"}
-- Fediverse: [discuss.systems/@gmgreen](https://discuss.systems/@gmgreen){:target="_blank"}
-
-
 ## Blogs I Read
 These are some blogs that I've found *interesting*. This doesn't mean I'm *endorsing* them.
 

@@ -2,6 +2,15 @@
 layout: default
 ---
 <p class="subtitle">{{site.description | escape}}</p>
+<section class="online-links" aria-labelledby="find-me-online">
+  <h2 id="find-me-online">Find me online</h2>
+  <ul>
+    <li>Fediverse: <a href="https://discuss.systems/@gmgreen" target="_blank">discuss.systems/@gmgreen</a></li>
+    <li>Github: <a href="https://github.com/gmgreenfield" target="_blank">github.com/gmgreenfield</a></li>
+    <li>Leetcode: <a href="https://leetcode.com/u/gmgreenfield/" target="_blank">leetcode.com/u/gmgreenfield</a></li>
+    <li>Sourcehut: <a href="https://sr.ht/~gmgreenfield" target="_blank">sr.ht/~gmgreenfield</a></li>
+  </ul>
+</section>
 {% assign posts = paginator.posts | default: site.posts | sort: 'date' | reverse %}
 <nav class="post-index" aria-labelledby="post-index-title">
   <h2 id="post-index-title" class="chapter-title">{{ site.title | escape }}{% if paginator.page > 1 %} · Page {{ paginator.page }}{% endif %}</h2>

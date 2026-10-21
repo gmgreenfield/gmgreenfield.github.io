@@ -15,7 +15,7 @@ To preview locally (Ruby 3.3 is used by the deployment workflow):
 
 ```sh
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --livereload
 ```
 
-Open `http://localhost:4000`. To generate the static site, run `bundle exec jekyll build`. The existing GitHub Pages workflow builds and deploys pushes to `main`.
+Open `http://localhost:4000`. The browser automatically reloads when you save changes. To generate the static site, run `bundle exec jekyll build`. The existing GitHub Pages workflow builds and deploys pushes to `main`.

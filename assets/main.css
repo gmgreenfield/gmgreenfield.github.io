@@ -48,6 +48,13 @@ a:focus-visible, summary:focus-visible {
 }
 .site-nav a { margin: 0; }
 .site-nav [aria-current="page"] { text-decoration: none; }
+.online-links { margin-block: var(--line-height); }
+.online-links h2 { margin: 0 0 calc(var(--line-height) / 4); }
+.online-links ul { margin-bottom: 0; }
+.online-links + .post-index .chapter-title {
+  margin-top: 0;
+  padding-top: 0;
+}
 .chapter-title, body h1.chapter-title {
   font-family: "Alegreya SC", serif;
   font-variant: titling-caps;
