@@ -18,10 +18,15 @@ These large software companies likely are still going to be doing leetcode based
 Embarrassingly though many of the medium difficulty ones are throwing me for a loop more than expected. For example, #55 "Jump Game":
 
 >You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position.
+>
 >Return true if you can reach the last index, or false otherwise.
+>
 >Example:
+>
 >Input: nums = [2,3,1,1,4]
+>
 >Output: true
+>
 >Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
 
 Of course once you have the answer written out it's trivial, but getting there is the thought process to be fully exercised. Thinking as an activity in itself is so underrated, many people now days have let it die. Literally, if you don't use it you will loose it. Many people aren't going to have the faculties to reason about such concepts as this. If you don't believe me, well look at what our society has devolved into. Seriously.
