@@ -32,4 +32,5 @@ Embarrassingly though many of the medium difficulty ones are throwing me for a l
 Of course once you have the answer written out it's trivial, but getting there is the thought process to be fully exercised. Thinking as an activity in itself is so underrated, many people now days have let it die. Literally, if you don't use it you will loose it. Many people aren't going to have the faculties to reason about such concepts as this. If you don't believe me, well look at what our society has devolved into. Seriously.
 
 Alright enough of the blackpill, it's keeping me busy. One can only do enough mindless YouTube watching before they end up like a boomer. My hope here is to be so tuned in my problem solving thought process is that each problem will take three minutes at most.
+
 END OF LINE
