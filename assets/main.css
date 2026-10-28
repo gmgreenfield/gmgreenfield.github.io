@@ -5,7 +5,12 @@
 @import url("fonts/fonts.css");
 @import url("proportional/index.css");
 
-/* Preserve the reference's 66ch text measure and 1.2rem baseline. */
+/* Keep the narrow reading style while giving long-form text more room. */
+:root {
+  --line-height: 1.65rem;
+  --body-inner-width: 78ch;
+  font-size: 18px;
+}
 body { min-width: 0; }
 main { margin-top: 0; }
 header.site-header { margin: 0; }
@@ -131,8 +136,14 @@ a:focus-visible, summary:focus-visible {
 }
 .prose pre code { font-size: 0.875rem; }
 .prose .highlight { margin: 0; }
-.highlight .c, .highlight .c1, .highlight .cm { color: #555; font-style: italic; }
-.highlight .k, .highlight .kn, .highlight .kd, .highlight .ow { font-weight: bold; }
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cp { color: #6b7280; font-style: italic; }
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .ow { color: #a21caf; font-weight: bold; }
+.highlight .nc, .highlight .nd, .highlight .ne, .highlight .nf, .highlight .nn { color: #0369a1; font-weight: bold; }
+.highlight .na, .highlight .nb, .highlight .ni, .highlight .nt, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi { color: #b45309; }
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .ss { color: #15803d; }
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il { color: #c2410c; }
+.highlight .o, .highlight .p { color: #475569; }
+.highlight .err { color: #a11; text-decoration: underline wavy; }
 .prose table {
   display: block;
   max-width: 100%;
@@ -197,6 +208,7 @@ a:focus-visible, summary:focus-visible {
   z-index: 1;
 }
 @media screen and (max-width: 480px) {
+  :root { font-size: 16px; }
   .site-header { margin: 0; }
   .site-header .site-title { font-size: 2rem; line-height: 1.2; }
   .post-navigation { flex-direction: column; gap: var(--line-height); }
