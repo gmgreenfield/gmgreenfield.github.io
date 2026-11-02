@@ -1,0 +1,46 @@
+---
+---
+$base-font-family: "Fira Sans", sans-serif;
+
+@import "minima";
+
+@font-face {
+    font-family: "Fira Sans";
+    src: url("fonts/FiraSans-Regular.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus {
+    color: rgb(126 156 255);
+}
+
+.site-header {
+    border-top: 5px solid rgb(110 138 240);
+    border-bottom-color: rgb(195 205 224);
+}
+
+.site-footer {
+    border-top-color: rgb(195 205 224);
+}
+
+.site-header .site-nav .page-link:hover,
+.site-header .site-title:hover {
+    text-decoration-line: underline;
+    text-decoration-color: rgb(126 156 255) !important;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+    font-weight: 700;
+}
+
+:root {
+    scrollbar-color: rgb(110 138 240) rgba(0, 0, 0, 0);
+}
+
+body {
+    background-color: rgb(230 235 245);
+}
