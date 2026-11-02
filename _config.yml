@@ -5,7 +5,7 @@ description: >-
 baseurl: ""
 url: "https://grahamg.xyz"
 lang: en-US
-
+theme: minima
 # The Proportional Web-inspired theme lives in _layouts, _includes, and assets.
 plugins:
   - jekyll-archives
