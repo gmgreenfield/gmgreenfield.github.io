@@ -240,7 +240,7 @@ TypeError: 'tuple' object does not support item assignment
 
 So the trick works because the object is mutable, not because Python suddenly acquired C pointers.
 
-## `ctypes`: When You Actually Need C Pointers
+## ctypes: When You Actually Need C Pointers
 
 Python does have a way to work with actual C-compatible pointers.
 
