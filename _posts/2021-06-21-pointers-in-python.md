@@ -322,4 +322,4 @@ So the short version is:
 **Python doesn't have C-style pointers as part of its normal object model. It has objects and names referring to those objects. Mutable objects can be used to achieve some pointer-like behavior, while `ctypes` can be used when you actually need C-compatible pointers.**
 
 That's the distinction worth remembering.
-
+END OF LINE

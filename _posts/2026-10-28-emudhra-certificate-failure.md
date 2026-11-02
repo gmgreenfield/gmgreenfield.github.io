@@ -18,3 +18,5 @@ I backed up the system CA bundle and removed the affected `emSign ECC Root CA - 
 A CA whose certificate keys can be reconstructed has failed at the most basic job its name promises. But the broader punchline is systemic: revocation only protects people when every client that relies on the trust store gets the memo. Browsers did; my Git did not. “HTTPS” is only as trustworthy as the certificate validation path underneath it.
 
 [Incident details and checks](https://emudhra.we-have-a-problem.com/) · [Hacker News discussion](https://news.ycombinator.com/item?id=50271640)
+
+END OF LINE
