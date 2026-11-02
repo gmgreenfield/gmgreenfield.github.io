@@ -12,6 +12,10 @@ $base-font-family: "Fira Sans", sans-serif;
     font-display: swap;
 }
 
+a {
+    color: #111;
+}
+
 a:hover {
     text-decoration-line: underline;
     text-decoration-color: rgb(126 156 255) !important;
