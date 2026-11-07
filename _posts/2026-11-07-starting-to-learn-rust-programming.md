@@ -1,5 +1,5 @@
 ---
-Layout: page
+Layout: post
 Title: "Starting to Learn Rust Programming"
 Description: "Why do I justify starting to learn Rust and an explanation of what makes it good at safety."
 date: 2026-11-07 08:26:00 -0500
