@@ -12,6 +12,16 @@ $base-font-family: "Fira Sans", sans-serif;
     font-display: swap;
 }
 
+article a[href^="http"]:not([href*="grahamg.xyz"]):not(:has(img))::after {
+    content: " ↗";
+    display: inline;
+    font-family: sans-serif;
+    font-size: 0.8em;
+    text-decoration: none;
+    vertical-align: super;
+    opacity: 0.7;
+}
+
 a {
     color: #111;
 }
