@@ -79,6 +79,16 @@ It is already quite complicated to implement for compiler writers, and may undul
 
 Bounds checking. It is not rocket science, but may induce a performance penalty. Most languages have some degree of support for it, C being the big exception, and C++ having some support for it, although it is optional. [1]
 
+## Practicing Algorithms in Rust
+
+Tying this into practicing leet code style problems, fortunately [LeetCode](https://leetcode.com/problemset/) supports Rust directly, so there's no need to translate solutions from another language or maintain a separate development environment just to work through problems.
+
+There's also [Exercism's Rust track](https://exercism.org/tracks/rust), which takes a somewhat different approach. Rather than focusing primarily on interview problems, it provides language-specific exercises intended to help develop familiarity with Rust's syntax and idioms.
+
+The two approaches complement each other nicely. LeetCode provides the algorithmic practice, while Exercism provides an opportunity to become more comfortable writing Rust itself. In particular I don't want to simply learn enough Rust to translate solutions from Python or C, I'd like to develop an understanding of how Rust programmers actually approach problems.
+
 ## References
 
 [1] [How does Rust guarantee memory safety and prevent segmentation faults?](https://stackoverflow.com/questions/36136201/how-does-rust-guarantee-memory-safety-and-prevent-segmentation-faults)
+
+END OF LINE
