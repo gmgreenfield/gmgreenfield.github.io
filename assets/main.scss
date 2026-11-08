@@ -33,6 +33,20 @@ a:hover {
     border-top-color: rgb(195 205 224);
 }
 
+.site-footer .build-info {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.site-footer .build-info a {
+  color: inherit;
+}
+
+.site-footer .commit-hash {
+  font-family: "Courier Prime", monospace;
+  font-size: 0.95em;
+}
+
 .site-header .site-nav .page-link:hover,
 .site-header .site-title:hover {
     text-decoration-line: underline;
