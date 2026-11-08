@@ -1,8 +1,12 @@
-<p class="build-info">
-  &copy; {{ 'now' | date: "%Y" }} {{ site.author | escape }}
-  &middot;
-  <a href="https://github.com/gmgreenfield/gmgreenfield.github.io/commit/{{ site.github.build_revision }}"
-     title="View source commit {{ site.github.build_revision }}">
-    <span class="commit-hash">{{ site.github.build_revision | slice: 0, 7 }}</span>
-  </a>
-</p>
+<footer class="site-footer">
+    <div class="wrapper">
+        <p class="build-info">
+            &copy; {{ 'now' | date: "%Y" }} {{ site.author | escape }}
+            &middot;
+            <a href="https://github.com/gmgreenfield/gmgreenfield.github.io/commit/{{ site.github.build_revision }}"
+             title="View source commit {{ site.github.build_revision }}">
+            <span class="commit-hash">{{ site.github.build_revision | slice: 0, 7 }}</span>
+            </a>
+        </p>
+    </div>
+</footer>
