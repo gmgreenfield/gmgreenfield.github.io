@@ -94,3 +94,5 @@ Keep a second SSH key on another device or hardware authenticator and register i
 - [OpenSSH: `ssh-keygen`](https://man.openbsd.org/ssh-keygen.1)
 - [OpenSSH: `ssh_config`](https://man.openbsd.org/ssh_config)
 - [Serge Gatezh: Protecting SSH Keys with macOS Secure Enclave](https://gatezh.com/posts/macos-secure-enclave-ssh-keys/)
+
+END OF LINE
