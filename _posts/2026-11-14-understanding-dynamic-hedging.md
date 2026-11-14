@@ -4,17 +4,51 @@ title: "Understanding Dynamic Hedging"
 description: "Working through Taleb's Dynamic Hedging as a programmer, with a small simulator showing why hedging in discrete time never matches the textbook."
 date: 2026-11-14 07:30:00 -0600
 categories: [general]
-tags: [finance, options, javascript]
+tags: [finance, options, python, javascript]
 ---
 
 <!-- TODO(graham): replace this opening with your own reason for picking the book up. -->
-I've been slowly working through Nassim Taleb's *Dynamic Hedging* [1], which he wrote in 1997, years before the books he's actually known for. I must admit I'm not a trader and have never run an options book, so take this as a programmer's notes on a trader's manual and not as advice on anything.
+I've been slowly working through Nassim Taleb's *Dynamic Hedging* [1], which he wrote in 1997, years before the books he's actually known for. I must admit I'm not a trader and have never run an options book (a trader's whole portfolio of positions), so take this as a programmer's notes on a trader's manual and not as advice on anything.
 
 What kept me reading is that the book is about the gap between a model and the thing the model describes. That's a gap that anyone who has shipped software should recognize.
 
+## Five Minutes of Vocabulary
+
+Finance has a lot of jargon, and most of it turns out to be short names for simple things. If you already know what a call option is, skip ahead. If not, this is everything the rest of the post leans on.
+
+**A call option** is a contract that gives you the right, but not the obligation, to buy a stock at a fixed price on a future date. The fixed price is the **strike** and the date is the **expiry**. The stock it refers to is called the **underlying**. What you pay for the contract up front is the **premium**.
+
+The whole contract fits in one line:
+
+```python
+payoff_at_expiry = max(stock_price - strike, 0)
+```
+
+Say the stock is at 100 and I pay 4 for a three-month call with a strike of 100. If the stock finishes at 110, I use my right to buy at 100, the contract is worth 10 and I'm up 6. If it finishes at 90, I let the contract expire, it's worth nothing and I'm down the 4 I paid. My loss is capped and my gain isn't, which is what I paid the premium for. A strike equal to the current price, like this one, is called **at-the-money**.
+
+**Long and short.** Being long something means I own it and make money when it goes up. Being short means I've sold something I borrowed, so I make money when it goes down. Being **flat** means my positions cancel out and I don't care which way the price goes.
+
+**Hedging** is taking a second position that loses when the first one wins, so that together they're flat. If I own a call (which gains when the stock rises), I can short some of the stock (which loses when it rises) against it.
+
+**Volatility** is how much the price jumps around: the standard deviation of its returns, scaled to a year. A volatility of 20% works out to a typical daily move of about 1.26%, because there are roughly 252 trading days in a year and standard deviations scale with the square root of time (20% / √252). There are two flavors, and the difference between them is what this whole post is about:
+
+- **Realized volatility** is what the stock actually did. You can only measure it afterwards.
+- **Implied volatility** is the market's guess, read backwards out of option prices. The pricing formula takes a volatility and returns a price; given a price, you can solve for the volatility that would produce it.
+
+**The Greeks** are the partial derivatives of the option's price with respect to its inputs. If the pricing formula is a function, the Greeks are its gradient:
+
+| Greek | Derivative with respect to | In plain words |
+|-------|---------------------------|----------------|
+| Delta | stock price | how much the option moves when the stock moves by 1 |
+| Gamma | stock price, twice | how fast delta itself changes |
+| Theta | time | how much value the option loses per day just by aging |
+| Vega | volatility | how much the option moves when implied volatility moves |
+
+Two last abbreviations: **P&L** is profit and loss, the running total of what a position has made or lost, and a **bp** (basis point) is a hundredth of a percent, so a 5 bps trading cost on 10,000 of stock is 5.
+
 ## The Textbook Version
 
-The Black-Scholes argument [2] goes roughly like this: hold an option, trade the underlying against it continuously, and the two positions cancel each other. What's left is riskless, a riskless position has to earn the risk-free rate, and that pins down the option's price.
+The Black-Scholes argument [2] goes roughly like this: hold an option, trade the underlying against it continuously, and the two positions cancel each other. What's left is riskless, a riskless position has to earn the risk-free rate (what you'd get for parking the money in government bills), and that pins down the option's price.
 
 For this to work you need a few things:
 
@@ -25,11 +59,46 @@ For this to work you need a few things:
 
 None of these hold for somebody actually running a position. As I read him, Taleb doesn't throw the formula away over this; he treats it as a shared language for quoting prices and then spends several hundred pages on everything the formula leaves behind. Hedging is discrete, it costs money, and the volatility you plugged in is a guess. The job is managing the residue.
 
+The formula itself is small. Here it is for a call option with interest rates set to zero, which is all the Python this post needs and uses nothing outside the standard library:
+
+```python
+from math import erf, exp, log, pi, sqrt
+
+
+def norm_cdf(x):
+    return 0.5 * (1 + erf(x / sqrt(2)))
+
+
+def bs_call(S, K, tau, vol):
+    """Black-Scholes call with zero rates. Returns (price, delta)."""
+    if tau <= 0:
+        return max(S - K, 0.0), float(S > K)
+    sd = vol * sqrt(tau)
+    d1 = (log(S / K) + 0.5 * sd * sd) / sd
+    return S * norm_cdf(d1) - K * norm_cdf(d1 - sd), norm_cdf(d1)
+```
+
+`S` is the stock price, `K` the strike, `tau` the time to expiry in years and `vol` the annualized volatility. It's a pure function of four numbers, and three of them you can read off a screen. The fourth, `vol`, is the one you have to make up.
+
 ## Delta Is a Hedge Ratio, Not a Fact
 
 Delta is how much the option's value moves when the underlying moves by one. If I'm long a call with a delta of 0.5, I short half a share against it and for a small move I'm flat.
 
-The catch is that delta isn't a property of the option sitting out in the world. It's an output of a model; change the volatility you feed in and you get a different delta for the same contract. It also moves on its own as time passes and as the price moves, which is the whole reason the hedge has to be *dynamic*: the number you hedged with this morning is already stale.
+The catch is that delta isn't a property of the option sitting out in the world. It's an output of a model; change the volatility you feed in and you get a different delta for the same contract:
+
+```python
+for vol in (0.10, 0.20, 0.40):
+    price, delta = bs_call(S=105, K=100, tau=0.25, vol=vol)
+    print(f"vol={vol:.0%}  price={price:5.2f}  delta={delta:.2f}")
+```
+
+```text
+vol=10%  price= 5.45  delta=0.84
+vol=20%  price= 7.06  delta=0.70
+vol=40%  price=10.91  delta=0.63
+```
+
+Same contract, same stock price, and the "correct" hedge is anywhere from 63 to 84 shares per hundred depending on a parameter nobody can observe. Delta also moves on its own as time passes and as the price moves, which is the whole reason the hedge has to be *dynamic*: the number you hedged with this morning is already stale.
 
 ## Gamma and Theta: The Rent You Pay
 
@@ -41,9 +110,35 @@ Of course that isn't free. The option loses value every day it sits there, which
 P&L  ≈  ½ · Γ · S² · [ (ΔS/S)² − σ² · Δt ]
 ```
 
-The first term in the brackets is what the price actually did, squared. The second is what the implied volatility σ said it would do. So a hedged option position is a bet on realized volatility against implied volatility, and the direction of the market drops out.
+Here Γ is gamma, S is the stock price, ΔS is how far it moved over the interval, σ is the implied volatility and Δt is the length of the interval in years. The first term in the brackets is what the price actually did, squared. The second is what the implied volatility σ said it would do. So a hedged option position is a bet on realized volatility against implied volatility, and the direction of the market drops out.
 
-It also gives a handy rule of thumb. With a stock at 100 and implied volatility of 20%, the break-even daily move is about `100 × 0.20 / √252 ≈ 1.26`. If I'm long gamma and the stock moves more than that, I made money that day; less, and I paid rent for nothing.
+It also gives a handy rule of thumb. With a stock at 100 and implied volatility of 20%, the break-even daily move is about `100 × 0.20 / √252 ≈ 1.26`. If I'm long gamma (I own the option, so big moves in either direction help me) and the stock moves more than that, I made money that day; less, and I paid rent for nothing.
+
+I didn't trust the approximation until I checked it against the pricing function. Buy the call, short delta shares, let one trading day pass with the stock moving by some amount, and compare what the position actually made to what the formula predicts:
+
+```python
+S, K, tau, vol, dt = 100, 100, 0.25, 0.20, 1 / 252
+price, delta = bs_call(S, K, tau, vol)
+
+sd = vol * sqrt(tau)
+d1 = (log(S / K) + 0.5 * sd * sd) / sd
+gamma = exp(-d1 * d1 / 2) / sqrt(2 * pi) / (S * sd)
+
+for move in (0.0, 0.5, 1.26, 2.0, 3.0):
+    exact = bs_call(S + move, K, tau - dt, vol)[0] - price - delta * move
+    approx = 0.5 * gamma * S**2 * ((move / S) ** 2 - vol**2 * dt)
+    print(f"move={move:4.2f}  exact={exact:+.3f}  formula={approx:+.3f}")
+```
+
+```text
+move=0.00  exact=-0.032  formula=-0.032
+move=0.50  exact=-0.027  formula=-0.027
+move=1.26  exact=-0.000  formula=+0.000
+move=2.00  exact=+0.047  formula=+0.048
+move=3.00  exact=+0.145  formula=+0.148
+```
+
+A day where nothing happens costs about three cents of rent. A move of 1.26 breaks even, as promised, and past that the payoff grows with the square of the move. The sign of the move doesn't appear anywhere; a drop of 3 pays the same as a rally of 3.
 
 ## A Simulator
 
@@ -270,6 +365,89 @@ A few things worth trying:
 
 That last one is the trade-off the book keeps circling back to: hedge too rarely and you're carrying variance, hedge too often and you're paying the market for the privilege. There is no setting on that slider that returns the riskless position from the derivation.
 
+## The Loop Itself
+
+The widget hides the part I find most interesting as a programmer, which is how little code the strategy is. Simulate a price path, then walk it. At each step the shares I'm short gain or lose against the move, I look up the new delta, and I pay to trade the difference. At the end the option pays off.
+
+```python
+import random
+from statistics import mean, stdev
+
+
+def gbm_path(S0, vol, T, steps, rng):
+    """Zero-drift geometric Brownian motion, steps + 1 prices."""
+    h = T / steps
+    path = [S0]
+    for _ in range(steps):
+        shock = rng.gauss(0, 1)
+        path.append(path[-1] * exp(-0.5 * vol * vol * h + vol * sqrt(h) * shock))
+    return path
+
+
+def hedged_pnl(path, K, T, implied_vol, cost=0.0):
+    """Long one call, short delta shares, rebalanced at every point on the path."""
+    steps = len(path) - 1
+    dt = T / steps
+    premium, delta = bs_call(path[0], K, T, implied_vol)
+    pnl = -premium - cost * delta * path[0]
+    for i in range(1, steps + 1):
+        S = path[i]
+        pnl -= delta * (S - path[i - 1])          # the short shares
+        new_delta = bs_call(S, K, T - i * dt, implied_vol)[1] if i < steps else 0.0
+        pnl -= cost * abs(new_delta - delta) * S  # pay to rebalance
+        delta = new_delta
+    return pnl + max(path[-1] - K, 0.0)           # the option pays off
+```
+
+Notice the two volatilities live in different functions. `gbm_path` takes the volatility the world actually has; `hedged_pnl` takes the one I believe in. Nothing forces them to agree, and the hedger never gets to see the first one directly.
+
+Running it a couple of thousand times per setting gives the same picture as the histogram above:
+
+```python
+def experiment(implied, realized, steps, cost=0.0, paths=2000, seed=1):
+    rng = random.Random(seed)
+    results = [
+        hedged_pnl(gbm_path(100, realized, 0.25, steps, rng), 100, 0.25, implied, cost)
+        for _ in range(paths)
+    ]
+    return mean(results), stdev(results)
+
+
+for steps in (4, 16, 63, 252):
+    m, s = experiment(implied=0.20, realized=0.20, steps=steps)
+    print(f"rehedges={steps:4d}  mean={m:+.2f}  stdev={s:.2f}")
+```
+
+```text
+rehedges=   4  mean=-0.03  stdev=1.60
+rehedges=  16  mean=+0.00  stdev=0.81
+rehedges=  63  mean=+0.00  stdev=0.42
+rehedges= 252  mean=+0.00  stdev=0.21
+```
+
+Each row hedges four times as often as the one before and the standard deviation halves, which is the square-root rule from experiment 1. It's the same convergence rate as any Monte Carlo estimate, and for the same reason: I'm averaging independent errors.
+
+Getting the volatility wrong, with 63 rehedges (once a trading day):
+
+```text
+realized=10%  mean=-1.98  stdev=0.55
+realized=20%  mean=+0.00  stdev=0.42
+realized=30%  mean=+1.98  stdev=1.11
+```
+
+Vega for this option is about 19.9 per unit of volatility, so being off by ten points should be worth about 1.99. The simulation lands on 1.98.
+
+And with `cost=0.0005`, 5 bps on every trade:
+
+```text
+rehedges=   4  mean=-0.11  stdev=1.60
+rehedges=  16  mean=-0.11  stdev=0.80
+rehedges=  63  mean=-0.18  stdev=0.42
+rehedges= 252  mean=-0.30  stdev=0.23
+```
+
+The standard deviation column barely changes from the free version. The mean column gets steadily worse. That's the whole trade-off in two columns of numbers: one is what I pay for certainty and the other is how much certainty I got.
+
 ## Past Delta
 
 The simulator still cheats, since it holds volatility constant and never jumps. Most of the book lives in the territory past that:
@@ -282,7 +460,7 @@ I'm not far enough along to write about those with any confidence, so I'll leave
 
 ## What a Programmer Takes From This
 
-The Black-Scholes derivation is a spec written for a machine that doesn't exist: one with an infinitely fast clock, free operations and perfectly known inputs. The actual system runs a polling loop. It samples at intervals, each sample costs something, and one of its parameters is an estimate that turns out wrong in ways you only see afterwards.
+The Black-Scholes derivation is a spec written for a machine that doesn't exist: one with an infinitely fast clock, free operations and perfectly known inputs. The actual system runs a polling loop, the `for` loop in `hedged_pnl` above. It samples at intervals, each sample costs something, and one of its parameters is an estimate that turns out wrong in ways you only see afterwards.
 
 Anyone who has run a control loop, a cache or a retry policy in production knows the shape of that problem. What I appreciate about the book is that it doesn't pretend the residue away; it gives each piece of it a name and a way to measure it. Understanding precisely how your model is wrong turns out to be most of the work.
 
