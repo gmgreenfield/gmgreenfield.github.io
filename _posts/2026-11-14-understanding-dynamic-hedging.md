@@ -7,6 +7,8 @@ categories: [general]
 tags: [finance, options, python, javascript]
 ---
 
+*A note before starting: I received significant assistance from Anthropic's Claude on this post, especially in creating the interactive JavaScript simulator. Since the subject is outside my area of expertise, I leaned on AI to help me write and understand the concepts explained below. In recent months I've decided to be more permissive about using AI as a tool for gaining knowledge outside my area of expertise, and this article is largely an experiment in diversifying the content here a little.*
+
 <!-- TODO(graham): replace this opening with your own reason for picking the book up. -->
 I've been slowly working through Nassim Taleb's *Dynamic Hedging* [1], which he wrote in 1997, years before the books he's actually known for. I must admit I'm not a trader and have never run an options book (a trader's whole portfolio of positions), so take this as a programmer's notes on a trader's manual and not as advice on anything.
 
