@@ -32,6 +32,8 @@ permalink: /books/
 
 ## Books Read
 
+### 2026
+
 - [*Stoner*](https://www.amazon.com/dp/1590171993) by John Williams
 - [*Stories of Your Life and Others*](https://www.amazon.com/dp/1101972122) by Ted Chiang
 - [*Snow Crash*](https://www.amazon.com/dp/0553380958) by Neal Stephenson
@@ -50,3 +52,4 @@ permalink: /books/
 - [*Neuromancer*](https://www.amazon.com/dp/0441007465) by William Gibson
 - [*The Machine Stops*](https://www.amazon.com/s?k=The+Machine+Stops+E.+M.+Forster) by E. M. Forster
 - [*I Have No Mouth, and I Must Scream*](https://www.amazon.com/dp/1454969280) by Harlan Ellison
+- [*Fanged Noumena*](https://www.amazon.com/dp/095530878X) by Nick Land
