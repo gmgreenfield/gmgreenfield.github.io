@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Blogs I Read — grahamg.xyz</title>
+  </head>
+  <body>
+    <outline text="People" title="People">
+      <outline type="rss" text="Scott Aaronson" title="Scott Aaronson" xmlUrl="https://scottaaronson.blog/?feed=rss2" htmlUrl="https://scottaaronson.blog/"/>
+      <outline type="rss" text="Vincent Bernat" title="Vincent Bernat" xmlUrl="https://vincent.bernat.ch/en/blog/atom.xml" htmlUrl="https://vincent.bernat.ch/en"/>
+      <outline type="rss" text="D. J. Bernstein" title="D. J. Bernstein" xmlUrl="https://blog.cr.yp.to/feed.application=xml" htmlUrl="https://blog.cr.yp.to/"/>
+      <outline type="rss" text="Bram Cohen" title="Bram Cohen" xmlUrl="https://bramcohen.com/feed" htmlUrl="https://bramcohen.com/"/>
+      <outline type="rss" text="Drew DeVault" title="Drew DeVault" xmlUrl="https://drewdevault.com/blog/index.xml" htmlUrl="https://drewdevault.com/"/>
+      <outline type="rss" text="Greg Egan" title="Greg Egan" xmlUrl="https://www.gregegan.net/feed.rss" htmlUrl="https://www.gregegan.net/"/>
+      <outline type="rss" text="Mitchell Hashimoto" title="Mitchell Hashimoto" xmlUrl="https://mitchellh.com/feed.xml" htmlUrl="https://mitchellh.com/"/>
+      <outline type="rss" text="George Hotz" title="George Hotz" xmlUrl="https://geohot.github.io/blog/feed.xml" htmlUrl="https://geohot.github.io/blog/"/>
+      <outline type="rss" text="Devine Lu Linvega" title="Devine Lu Linvega" xmlUrl="https://wiki.xxiivv.com/links/log.xml" htmlUrl="https://wiki.xxiivv.com/site/blog.html"/>
+      <outline type="rss" text="Uros Popovic" title="Uros Popovic" xmlUrl="https://popovicu.com/rss.xml" htmlUrl="https://popovicu.com/"/>
+      <outline type="rss" text="Bruce Schneier" title="Bruce Schneier" xmlUrl="https://www.schneier.com/feed/" htmlUrl="https://www.schneier.com/"/>
+      <outline type="rss" text="Chris Siebenmann" title="Chris Siebenmann" xmlUrl="https://utcc.utoronto.ca/~cks/space/blog/?atom" htmlUrl="https://utcc.utoronto.ca/~cks/space/blog/"/>
+      <outline type="rss" text="Christopher Wellons" title="Christopher Wellons" xmlUrl="https://nullprogram.com/feed/" htmlUrl="https://nullprogram.com/"/>
+      <outline type="rss" text="Jamie Zawinski" title="Jamie Zawinski" xmlUrl="https://cdn.jwz.org/blog/feed/" htmlUrl="https://www.jwz.org/blog/"/>
+    </outline>
+    <outline text="Zines &amp; publications" title="Zines &amp; publications">
+      <outline type="rss" text="Paged Out!" title="Paged Out!" xmlUrl="https://pagedout.institute/rss.xml" htmlUrl="https://pagedout.institute/"/>
+      <outline type="rss" text="Project Zero" title="Project Zero" xmlUrl="https://projectzero.google/feed.xml" htmlUrl="https://projectzero.google/"/>
+    </outline>
+  </body>
+</opml>
