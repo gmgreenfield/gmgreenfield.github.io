@@ -3,7 +3,6 @@ layout: post
 title: "Understanding Dynamic Hedging"
 description: "Working through Taleb's Dynamic Hedging as a programmer, with a small simulator showing why hedging in discrete time never matches the textbook."
 date: 2026-11-14 07:30:00 -0600
-categories: [general]
 tags: [finance, options, python, javascript]
 ---
 

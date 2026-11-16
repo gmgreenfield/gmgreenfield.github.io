@@ -3,7 +3,6 @@ layout: post
 title: "When a Certificate Authority Becomes the Punchline"
 description: "The eMudhra key compromise exposed how a broken certificate can outlive the browsers that stopped trusting it."
 date: 2026-10-28 12:09:00 -0500
-categories: [general]
 tags: [security, macos, certificates]
 ---
 

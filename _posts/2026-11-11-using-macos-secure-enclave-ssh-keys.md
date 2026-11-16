@@ -2,7 +2,7 @@
 layout: post
 title: "Using the macOS Secure Enclave for SSH Keys"
 date: 2026-11-11
-categories: [macos, ssh, security]
+tags: [security, macos, ssh]
 ---
 
 Sure, your SSH private keys are protected in `~/.ssh` via file permissions and passphrases, but a process running under your account may be able to copy them.
